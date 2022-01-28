@@ -17,9 +17,18 @@ int main(){
 
      c = ~a; // bitwise not operator ( ~ )  // reverse bits
     cout << "bitwise ~ of " << a <<" is " << c << endl;
+
+    int d = a << 2; // left shift operator ( << )
+    cout << "left shift of " << a << " by 2 is " << d << endl;
+
+    d = a >> 2; // right shift operator ( >> )
+    cout << "right shift of " << a << " by 2 is " << d << endl;
+
+
     // bitset<8> bs(22);
     // cout<<bs<<endl;
     // bitset<8> bs1(33);
     // cout<<bs1<<endl;
     return 0;
 }
+
