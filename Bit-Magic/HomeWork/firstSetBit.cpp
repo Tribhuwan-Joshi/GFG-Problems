@@ -4,7 +4,7 @@
 #include <cmath>
 using namespace std;
 int firstSetBit(int n){
-    return log2(n & -n) + 1;
+    return log2(n & ~(n-1)) + 1;
     // int index = 1;
     // while(n){
     //     if(n&1){
