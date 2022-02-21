@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 int maxcut(int n, int a, int b, int c)
@@ -11,16 +10,20 @@ int maxcut(int n, int a, int b, int c)
     if (n < 0)
         return 1;
 
-    int res = max(maxcut(n - a, a, b, c), maxcut(n - b, a, b, c), maxcut(n - c, a, b, c));
+    int n1 = maxcut(n-a,a,b,c);
+    int n2 = maxcut(n - b, a, b, c);
+    int n3 = maxcut(n - c, a, b, c);
+
+    int res = (n1 > n2) ? (n1 > n3 ? n1 : n3) : (n2 > n3 ? n2 : n3);
 
     if (res == -1)
         return -1;
 
-    return (res + 1);
+    return res+1;
 }
 
 int main(){
-    cout << maxcut(23, 11, 9, 12);
+    cout << maxcut(9,2,2,2);
 
     return 0;
 }
