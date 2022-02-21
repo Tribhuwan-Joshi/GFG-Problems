@@ -28,3 +28,17 @@ int main(){
     return 0;
 }
 
+/*
+def solve(n,a,b,c):
+    if(n < 0):
+        return -1;
+    if(n == 0):
+        return 0;
+    res =  max(solve(n-a,a,b,c), solve(n-b,a,b,c), solve(n-c,a,b,c));
+    if(res==-1):
+        return -1
+    return res+1;
+    
+
+print(solve(23,11,12,13))
+*/
